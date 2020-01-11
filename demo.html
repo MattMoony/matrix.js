@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Matrix</title>
+</head>
+<body>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            user-select: none;
+        }
+
+        #main-canvas {
+            width: 100%;
+            height: 100%;
+            background-color: #222;
+        }
+    </style>
+    
+    <canvas id="main-canvas"></canvas>
+
+    <script src="./matrix.js"></script>
+    <script>
+        window.onload = () => {
+            let can = document.getElementById('main-canvas');
+            window.onresize = () => {
+                can.width = window.innerWidth;
+                can.height = window.innerHeight;
+            }
+            window.onresize();
+            matrix.playOn(can);
+        }
+    </script>
+</body>
+
+</html>
